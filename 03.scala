@@ -7,7 +7,7 @@ object q03 extends App{
     // var newname = name.toCharArray()
     // newname(pos) = fun(name).charAt(pos)
     var newname = name.replace(name.charAt(pos), fun(name).charAt(pos))
-    // newname
+    newname
   }
   println(formatNames("Benny", toUpper, 0))
   println(formatNames("Niroshan", toUpper, 1))
