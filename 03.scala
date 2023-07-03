@@ -3,8 +3,15 @@ object q03 extends App{
   def toLower(str:String) = str.toLowerCase
   def firstUpper(str:String) = str.capitalize
   def lastUpper(str:String) = str.capitalize
-  def formatNames(name:String, fun:String=>String) = fun(name)
-  println(toUpper("hellow"))
-  println(firstUpper("nnnsdsdadsSDDASDiasdp"))
-  println(lastUpper("heelj"))
+  def formatNames(name:String, fun:String=>String, pos:Int) = {
+    // var newname = name.toCharArray()
+    // newname(pos) = fun(name).charAt(pos)
+    var newname = name.replace(name.charAt(pos), fun(name).charAt(pos))
+    // newname
+  }
+  println(formatNames("Benny", toUpper, 0))
+  println(formatNames("Niroshan", toUpper, 1))
+  println(formatNames("Saman", toLower, 0))
+  println(formatNames("Kumara", toUpper, 5))
+
 }
