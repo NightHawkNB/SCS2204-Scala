@@ -4,8 +4,6 @@ object q03 extends App{
   def firstUpper(str:String) = str.capitalize
   def lastUpper(str:String) = str.capitalize
   def formatNames(name:String, fun:String=>String, pos:Int) = {
-    // var newname = name.toCharArray()
-    // newname(pos) = fun(name).charAt(pos)
     var newname = name.replace(name.charAt(pos), fun(name).charAt(pos))
     newname
   }
