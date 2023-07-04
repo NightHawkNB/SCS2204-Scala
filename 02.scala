@@ -1,3 +1,5 @@
+
+import scala.io.StdIn.readInt
 object q02 extends App{
     def cat(n:Int) = n match{
         case x if x<0 => println("Negative")
@@ -5,9 +7,6 @@ object q02 extends App{
         case x if x%2==0 => println("Even")
         case x => println("Odd")
     }
-
-    cat(2)
-    cat(-1)
-    cat(7)
-    cat(0)
+    var x = readInt()
+    cat(x)
 }   

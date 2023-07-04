@@ -1,11 +1,12 @@
 object q03 extends App{
   def toUpper(str:String) = str.toUpperCase
   def toLower(str:String) = str.toLowerCase
-  def firstUpper(str:String) = str.capitalize
-  def lastUpper(str:String) = str.capitalize
   def formatNames(name:String, fun:String=>String, pos:Int) = {
-    var newname = name.replace(name.charAt(pos), fun(name).charAt(pos))
-    newname
+    var newname2 = ""
+    newname2 += name.substring(0,pos)
+    newname2 += fun(name).charAt(pos)
+    newname2 += name.substring(pos+1)
+    newname2
   }
   println(formatNames("Benny", toUpper, 0))
   println(formatNames("Niroshan", toUpper, 1))
