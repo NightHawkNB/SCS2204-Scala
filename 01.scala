@@ -6,6 +6,8 @@ object q01 extends App{
         case x => 0.065*x
     }
 
+
+
     println(interest(20000))
     println(interest(200000))
     println(interest(2000000))
