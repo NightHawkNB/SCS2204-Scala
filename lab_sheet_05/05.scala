@@ -1,4 +1,4 @@
-object q04 extends App{
+object q05 extends App{
     def isEven(n:Int):Boolean = {
         if(n%2 == 0) true
         else false
