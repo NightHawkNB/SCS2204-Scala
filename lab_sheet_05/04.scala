@@ -3,10 +3,6 @@ object q04 extends App{
         if(n%2 == 0) true
         else false
     }
-    def isOdd(n:Int):Boolean = {
-        if(n%2 == 1) true
-        else false
-    }
 
     def EvenOdd(n:Int): String = n match{
         case x if x <= 0 => "Not a postive integer"
