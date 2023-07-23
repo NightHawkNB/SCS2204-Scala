@@ -22,10 +22,12 @@ object cipher_code extends App{
         func(data, cipher)
     }
 
-    println("Starting String : 'ABCD EFGH'")
+    var data = "ABCD EFGH"
 
-    println("After Encryption : " + encrypt("ABCD EFGH"))
-    println("After Decryption : " + decrypt(encrypt("ABCD EFGH")))
-    println("Using the cipher Function for encryption : " + cipher("ABCD EFGH", encrypt))
-    println("Using the cipher Function for decryption : " + cipher(encrypt("ABCD EFGH"), decrypt))
+    println("Starting String : " + data)
+
+    println("After Encryption : " + encrypt(data))
+    println("After Decryption : " + decrypt(encrypt(data)))
+    println("Using the cipher Function for encryption : " + cipher(data, encrypt))
+    println("Using the cipher Function for decryption : " + cipher(encrypt(data), decrypt))
 }
