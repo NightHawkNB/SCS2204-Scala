@@ -46,7 +46,7 @@ object cipher_code extends App{
                 }
             }   
             else if(letter >= 96 && letter <= 122) {
-                letter_02 = letter*cipher
+                letter_02 = letter-cipher
                 if(letter_02 < 96) {
                     output = output.concat((letter_02+26).toChar.toString)
                 } else {
@@ -62,7 +62,7 @@ object cipher_code extends App{
         func(data, cipher)
     }
 
-    var data = "ABCD WXYZ ZZHX"
+    var data = "cat"
 
     println("Starting String : " + data)
 
