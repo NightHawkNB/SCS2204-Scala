@@ -1,10 +1,8 @@
-object Main extends App {
+object q02 extends App {
   def calculateSquare(numbers: List[Int]): List[Int] = {
-    numbers.map(number => number * number)
+    numbers.map(n => n*n)
   }
 
-  val inputList = List(1, 2, 3, 4, 5)
-  val outputList = calculateSquare(inputList)
-
-  println(outputList)
+  val List2 = List(1, 2, 3, 4, 5)
+  println(calculateSquare(List2))
 }

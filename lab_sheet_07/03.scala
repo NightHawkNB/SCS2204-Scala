@@ -1,23 +1,21 @@
-object Main extends App {
-  def isPrime(n: Int): Boolean = n match {
-    case x if x <= 1 => false
-    case 2 => true
-    case x if x % 2 == 0 => false
-    case _ =>
-      var i = 3
-      while (i * i <= n) {
-        if (n % i == 0) return false
-        i += 2
-      }
-      true
+object q03 extends App {
+  def gcd(a:Int, b:Int): Int = b match {
+      case 0 => a
+      case x if x>a => gcd(x,a)
+      case x => gcd(x, a%x)
+  }
+
+  def isPrime(n:Int, temp:Int=2):Boolean = temp match {
+      case x if(n < x) => false
+      case x if(x == n) => true
+      case x if gcd(n,x)>1 => false
+      case x => isPrime(n, x+1)
   }
 
   def filterPrime(numbers: List[Int]): List[Int] = {
-    numbers.filter(isPrime)
+    numbers.filter(m => isPrime(m))
   }
 
-  val inputList = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-  val outputList = filterPrime(inputList)
-
-  println(outputList)
+  val List3 = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+  println(filterPrime(List3))
 }

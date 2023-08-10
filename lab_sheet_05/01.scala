@@ -7,10 +7,11 @@ object q01 extends App{
     }
 
     def isPrime(n:Int, temp:Int=2):Boolean = temp match {
+        case x if(n < x) => false
         case x if(x == n) => true
         case x if gcd(n,x)>1 => false
         case x => isPrime(n, x+1)
     }
 
-    println(isPrime(11))
+    println(isPrime(1))
 }

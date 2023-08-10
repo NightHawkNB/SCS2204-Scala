@@ -1,10 +1,8 @@
-object Main extends App {
-  def filterEvenNumbers(numbers: List[Int]): List[Int] = {
-    numbers.filter(number => number % 2 == 0)
+object q01 extends App {
+  def filterEvenNumbers(values: List[Int]): List[Int] = {
+    values.filter(n => n % 2 == 0)
   }
 
-  val inputList = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-  val outputList = filterEvenNumbers(inputList)
-
-  println(outputList)
+  val List1 = List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+  println(filterEvenNumbers(List1))
 }
