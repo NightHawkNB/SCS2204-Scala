@@ -1,6 +1,6 @@
 import scala.io.StdIn.readInt
-object q02 extends App{
-    def cat(n:Int) = n match{
+object q02 extends App{ 
+    val cat:Int => Unit = {
         case x if x<0 => println("Negative")
         case x if x==0 => println("Zero")
         case x if x%2==0 => println("Even")
@@ -8,4 +8,4 @@ object q02 extends App{
     }
     var x = readInt()
     cat(x)
-}   
+}
