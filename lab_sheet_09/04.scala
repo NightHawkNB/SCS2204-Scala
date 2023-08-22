@@ -28,7 +28,7 @@ object q04 extends App {
                 this.interest = 0.05*this.balance
                 this.balance += this.interest
             } else if(this.balance < 0) {
-                this.interest = 0.1*this.balance
+                this.interest = 0.1*(this.balance.abs)
                 this.balance -= this.interest
             }
         }
@@ -39,7 +39,7 @@ object q04 extends App {
         }
     }
 
-    val bank = List(new Account("Nipun", 5000.00), new Account("Kavindu", -1000.00), new Account("Chamath", -9250.50))
+    val bank = List(new Account("Nipun", 1000), new Account("Kavindu", -100.00), new Account("Chamath", -200))
 
     println("------List of Accounts with Negative Balances------")
     bank(0).display()
