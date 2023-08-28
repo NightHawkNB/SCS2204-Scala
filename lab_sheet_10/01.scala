@@ -1,7 +1,7 @@
 object q01 extends App {
     def calcAvg(temp: List[Double]) : Double = {
         var fahr = temp.map(cels => (cels*9/5) + 32)
-        var total = fahr.reduce((x, y) => x + y)
+        var total = fahr.reduce(_+_)
         var avg = total / fahr.length
         avg
     }

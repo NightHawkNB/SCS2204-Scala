@@ -1,7 +1,7 @@
 object q02 extends App{
     def occurence(words: List[String]) : Int = {
         var count = words.map(word => word.length)
-        var total = count.reduce((x,y) => x+y)
+        var total = count.reduce(_+_)
         total
     }
 
